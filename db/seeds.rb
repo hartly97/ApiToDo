@@ -32,8 +32,6 @@
   items = Item.all
 
 
-
-
 puts "3 users created"
 puts "6 lists created"
 puts "6 items created"
