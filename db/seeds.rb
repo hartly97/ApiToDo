@@ -15,6 +15,13 @@
   end
   users = User.all
 
+  6.times do
+    list = List.new(
+      name: Faker::Food.spice,
+      )
+    list.save!
+  end
+  lists = List.all
 
   6.times do
     item = Item.new(
@@ -24,13 +31,7 @@
   end
   items = Item.all
 
-  6.times do
-    list = List.new(
-      name: Faker::Food.seasoning,
-      )
-    list.save!
-  end
-  lists = List.all
+
 
 
 puts "3 users created"
