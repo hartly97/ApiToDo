@@ -3,7 +3,7 @@ class CreateLists < ActiveRecord::Migration[5.0]
     create_table :lists do |t|
       t.string :name
       t.integer :user_id
-      t.string :permissions 
+      t.string :permissions, default: "private" 
       t.integer :items
 
       t.timestamps

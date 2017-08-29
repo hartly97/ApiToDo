@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
   3.times do
     user = User.new(
@@ -17,20 +18,20 @@
 
 
   6.times do
+    list = List.new(
+      name: Faker::Lorem.characters(8) #Faker::Food.seasoning,
+      )
+    list.save!
+  end
+  lists = List.all
+
+  6.times do
     item = Item.new(
       item: Faker::Food.measurement,
       )
     item.save!
   end
   items = Item.all
-
-  6.times do
-    list = List.new(
-      name: Faker::Food.seasoning,
-      )
-    list.save!
-  end
-  lists = List.all
 
 
 puts "3 users created"
